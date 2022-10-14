@@ -1,0 +1,7 @@
+Server	jelani.db.elephantsql.com (jelani-01)
+Region	amazon-web-services::us-east-1
+Created at	2022-10-08 16:03 UTC+00:00
+User & Default database	ajtwmuhk
+Password	3hORdwAVdn3sby395O-NnnFnaCo1MqSi
+URL	postgres://ajtwmuhk:3hORdwAVdn3sby395O-NnnFnaCo1MqSi@jelani.db.elephantsql.com/ajtwmuhk
+Max database size	20 MB
