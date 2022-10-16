@@ -1,4 +1,3 @@
---CREATE SCHEMA IF NOT EXISTS taller;
 create table if not exists taller.clientes
 (
     cedcliente  integer not null,
@@ -11,9 +10,6 @@ create table if not exists taller.clientes
     feccliente  date    not null,
     primary key (cedcliente)
 );
-
-alter table taller.clientes
-    owner to postgres;
 
 create table if not exists taller.vehiculos
 (
@@ -30,27 +26,26 @@ create table if not exists taller.vehiculos
             on delete restrict
 );
 
-alter table taller.vehiculos
-    owner to postgres;
-
 create table if not exists taller.empleados
 (
-    cedempleado    integer not null,
-    nomempleado    varchar not null,
-    apeempleado    varchar not null,
-    dirempleado    varchar not null,
-    telempleado    varchar not null,
+    cedempleado    integer                   not null,
+    nomempleado    varchar                   not null,
+    apeempleado    varchar                   not null,
+    dirempleado    varchar                   not null,
+    telempleado    varchar                   not null,
     mailempleado   varchar,
-    ciuempleado    varchar not null,
-    fecempleado    date    not null,
-    fecingempleado date    not null,
-    espempleado    varchar not null,
-    sueldoempleado integer not null,
+    ciuempleado    varchar                   not null,
+    fecempleado    date                      not null,
+    fecingempleado date default CURRENT_DATE not null,
+    espempleado    varchar                   not null,
+    sueldoempleado integer                   not null,
     primary key (cedempleado)
 );
 
 alter table taller.empleados
-    owner to postgres;
+    add constraint especialidad_check
+        check (((espempleado)::text ~~ 'carro'::text) OR ((espempleado)::text ~~ 'moto'::text) OR
+               ((espempleado)::text ~~ 'camion'::text) OR ((espempleado)::text ~~ 'camioneta'::text));
 
 create table if not exists taller.planillas
 (
@@ -75,9 +70,6 @@ create table if not exists taller.planillas
             on delete restrict
 );
 
-alter table taller.planillas
-    owner to postgres;
-
 create table if not exists taller.productos
 (
     codproducto  bigserial,
@@ -89,9 +81,6 @@ create table if not exists taller.productos
     undsproducto integer not null,
     primary key (codproducto)
 );
-
-alter table taller.productos
-    owner to postgres;
 
 create table if not exists taller.facturas
 (
@@ -108,9 +97,6 @@ create table if not exists taller.facturas
             on delete restrict
 );
 
-alter table taller.facturas
-    owner to postgres;
-
 create table if not exists taller.facturas_credito
 (
     numfactura      bigserial,
@@ -123,7 +109,32 @@ create table if not exists taller.facturas_credito
             on delete restrict
 );
 
-alter table taller.facturas_credito
-    owner to postgres;
+create table if not exists taller.detalle
+(
+    numfactura  bigserial,
+    codproducto bigserial,
+    cantproducto integer not null,
+    subtotal   integer not null,
+    primary key (numfactura, codproducto),
+    constraint detalle_numfactura_fk
+        foreign key (numfactura) references taller.facturas
+            on delete restrict,
+    constraint detalle_codproducto_fk
+        foreign key (codproducto) references taller.productos
+            on delete restrict
+);
+ 
+create table if not exists taller.sorteos
+(
+    codsorteo bigserial,
+    fecsorteo date    not null,
+    cedcliente integer not null,
+    tipvehiculo varchar,
+    premio varchar,
+    primary key (codsorteo),
+    constraint sorteos_cedcliente_fk
+        foreign key (cedcliente) references taller.clientes
+            on delete restrict
+);
 
 
