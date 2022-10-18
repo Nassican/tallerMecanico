@@ -11,8 +11,8 @@ package login;
  */
 public class Sistema extends javax.swing.JFrame {
 
-    /** Creates new form Sistema */
     public Sistema() {
+        
         initComponents();
         
         this.setLocationRelativeTo(null);
@@ -28,24 +28,282 @@ public class Sistema extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        Background = new javax.swing.JPanel();
+        jTabbedPane1 = new javax.swing.JTabbedPane();
+        PanelCarros = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        PanelEmpleados = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        PanelClientes = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
+        Panelfactura = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
+        IconCarro = new javax.swing.JLabel();
+        btncliente1 = new javax.swing.JPanel();
+        IconTrabajador = new javax.swing.JLabel();
+        btntrabajador = new javax.swing.JPanel();
+        IconCliente = new javax.swing.JLabel();
+        btncliente = new javax.swing.JPanel();
+        Iconfactura = new javax.swing.JLabel();
+        btnfactura = new javax.swing.JPanel();
+        btncerrarsesion = new javax.swing.JPanel();
+        txtcerrarsesion = new javax.swing.JLabel();
+        BackGr0undlbl = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
         setResizable(false);
+
+        Background.setBackground(new java.awt.Color(255, 255, 255));
+        Background.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        PanelCarros.setBackground(new java.awt.Color(255, 255, 255));
+        PanelCarros.setForeground(new java.awt.Color(255, 0, 0));
+        PanelCarros.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel2.setFont(new java.awt.Font("Roboto Black", 0, 48)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel2.setText("COCHES");
+        PanelCarros.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 310, -1, -1));
+
+        jTabbedPane1.addTab("tab1", PanelCarros);
+
+        PanelEmpleados.setBackground(new java.awt.Color(255, 255, 255));
+        PanelEmpleados.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel3.setFont(new java.awt.Font("Roboto Black", 0, 48)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel3.setText("EMPLEADOS");
+        PanelEmpleados.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 300, 280, 80));
+
+        jTabbedPane1.addTab("tab2", PanelEmpleados);
+
+        PanelClientes.setBackground(new java.awt.Color(255, 255, 255));
+        PanelClientes.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel4.setBackground(new java.awt.Color(102, 102, 102));
+        jLabel4.setFont(new java.awt.Font("Roboto Black", 0, 48)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel4.setText("CLIENTES");
+        PanelClientes.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 290, 230, 80));
+
+        jTabbedPane1.addTab("tab3", PanelClientes);
+
+        Panelfactura.setBackground(new java.awt.Color(255, 255, 255));
+        Panelfactura.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel5.setFont(new java.awt.Font("Roboto Black", 0, 48)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel5.setText("FACTURACIÓN");
+        Panelfactura.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 300, 360, 80));
+
+        jTabbedPane1.addTab("tab4", Panelfactura);
+
+        Background.add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 0, 1120, 720));
+
+        IconCarro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/imagenes/CarroIcon.png"))); // NOI18N
+        IconCarro.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                IconCarroMouseClicked(evt);
+            }
+        });
+        Background.add(IconCarro, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, -1, -1));
+
+        btncliente1.setBackground(new java.awt.Color(153, 0, 0));
+        btncliente1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btncliente1MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout btncliente1Layout = new javax.swing.GroupLayout(btncliente1);
+        btncliente1.setLayout(btncliente1Layout);
+        btncliente1Layout.setHorizontalGroup(
+            btncliente1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 110, Short.MAX_VALUE)
+        );
+        btncliente1Layout.setVerticalGroup(
+            btncliente1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 70, Short.MAX_VALUE)
+        );
+
+        Background.add(btncliente1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 110, 70));
+
+        IconTrabajador.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/imagenes/TrabajadorIcon.png"))); // NOI18N
+        IconTrabajador.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                IconTrabajadorMouseClicked(evt);
+            }
+        });
+        Background.add(IconTrabajador, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, -1, -1));
+
+        btntrabajador.setBackground(new java.awt.Color(153, 0, 0));
+        btntrabajador.setForeground(new java.awt.Color(153, 0, 0));
+        btntrabajador.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btntrabajadorMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout btntrabajadorLayout = new javax.swing.GroupLayout(btntrabajador);
+        btntrabajador.setLayout(btntrabajadorLayout);
+        btntrabajadorLayout.setHorizontalGroup(
+            btntrabajadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 110, Short.MAX_VALUE)
+        );
+        btntrabajadorLayout.setVerticalGroup(
+            btntrabajadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 70, Short.MAX_VALUE)
+        );
+
+        Background.add(btntrabajador, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 110, 70));
+
+        IconCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/imagenes/Cliente2Icon.png"))); // NOI18N
+        IconCliente.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                IconClienteMouseClicked(evt);
+            }
+        });
+        Background.add(IconCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, 60, 80));
+
+        btncliente.setBackground(new java.awt.Color(153, 0, 0));
+        btncliente.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnclienteMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout btnclienteLayout = new javax.swing.GroupLayout(btncliente);
+        btncliente.setLayout(btnclienteLayout);
+        btnclienteLayout.setHorizontalGroup(
+            btnclienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 110, Short.MAX_VALUE)
+        );
+        btnclienteLayout.setVerticalGroup(
+            btnclienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 70, Short.MAX_VALUE)
+        );
+
+        Background.add(btncliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 110, 70));
+
+        Iconfactura.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/imagenes/FacturaIcon.png"))); // NOI18N
+        Background.add(Iconfactura, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 280, 50, 60));
+
+        btnfactura.setBackground(new java.awt.Color(153, 0, 0));
+        btnfactura.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnfacturaMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout btnfacturaLayout = new javax.swing.GroupLayout(btnfactura);
+        btnfactura.setLayout(btnfacturaLayout);
+        btnfacturaLayout.setHorizontalGroup(
+            btnfacturaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 110, Short.MAX_VALUE)
+        );
+        btnfacturaLayout.setVerticalGroup(
+            btnfacturaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 80, Short.MAX_VALUE)
+        );
+
+        Background.add(btnfactura, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, -1, 80));
+
+        btncerrarsesion.setBackground(new java.awt.Color(255, 255, 255));
+
+        txtcerrarsesion.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
+        txtcerrarsesion.setForeground(new java.awt.Color(0, 0, 0));
+        txtcerrarsesion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        txtcerrarsesion.setText("CERRAR SESIÓN");
+        txtcerrarsesion.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txtcerrarsesionMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                txtcerrarsesionMouseEntered(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                txtcerrarsesionMousePressed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout btncerrarsesionLayout = new javax.swing.GroupLayout(btncerrarsesion);
+        btncerrarsesion.setLayout(btncerrarsesionLayout);
+        btncerrarsesionLayout.setHorizontalGroup(
+            btncerrarsesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(txtcerrarsesion, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
+        );
+        btncerrarsesionLayout.setVerticalGroup(
+            btncerrarsesionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btncerrarsesionLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(txtcerrarsesion, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        Background.add(btncerrarsesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 660, 110, 40));
+
+        BackGr0undlbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/imagenes/Sistema.jpg"))); // NOI18N
+        BackGr0undlbl.setText("jLabel1");
+        Background.add(BackGr0undlbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(-30, 0, 1280, 720));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1280, Short.MAX_VALUE)
+            .addComponent(Background, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 720, Short.MAX_VALUE)
+            .addComponent(Background, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void IconCarroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_IconCarroMouseClicked
+      jTabbedPane1.setSelectedIndex(0);
+    }//GEN-LAST:event_IconCarroMouseClicked
+
+    private void IconTrabajadorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_IconTrabajadorMouseClicked
+        jTabbedPane1.setSelectedIndex(1);
+    }//GEN-LAST:event_IconTrabajadorMouseClicked
+
+    private void IconClienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_IconClienteMouseClicked
+        jTabbedPane1.setSelectedIndex(2);
+    }//GEN-LAST:event_IconClienteMouseClicked
+
+    private void txtcerrarsesionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtcerrarsesionMouseClicked
+        login form= new login();
+            form.setVisible(true);
+            this.dispose();
+    }//GEN-LAST:event_txtcerrarsesionMouseClicked
+
+    private void btncliente1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btncliente1MouseClicked
+        jTabbedPane1.setSelectedIndex(0);
+    }//GEN-LAST:event_btncliente1MouseClicked
+
+    private void btntrabajadorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btntrabajadorMouseClicked
+        jTabbedPane1.setSelectedIndex(1);        
+    }//GEN-LAST:event_btntrabajadorMouseClicked
+
+    private void btnclienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnclienteMouseClicked
+        jTabbedPane1.setSelectedIndex(2);
+    }//GEN-LAST:event_btnclienteMouseClicked
+
+    private void txtcerrarsesionMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtcerrarsesionMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtcerrarsesionMouseEntered
+
+    private void txtcerrarsesionMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtcerrarsesionMousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtcerrarsesionMousePressed
+
+    private void btnfacturaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnfacturaMouseClicked
+        jTabbedPane1.setSelectedIndex(3);
+    }//GEN-LAST:event_btnfacturaMouseClicked
+
+    
+    
     /**
      * @param args the command line arguments
      */
@@ -82,6 +340,27 @@ public class Sistema extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel BackGr0undlbl;
+    private javax.swing.JPanel Background;
+    private javax.swing.JLabel IconCarro;
+    private javax.swing.JLabel IconCliente;
+    private javax.swing.JLabel IconTrabajador;
+    private javax.swing.JLabel Iconfactura;
+    private javax.swing.JPanel PanelCarros;
+    private javax.swing.JPanel PanelClientes;
+    private javax.swing.JPanel PanelEmpleados;
+    private javax.swing.JPanel Panelfactura;
+    private javax.swing.JPanel btncerrarsesion;
+    private javax.swing.JPanel btncliente;
+    private javax.swing.JPanel btncliente1;
+    private javax.swing.JPanel btnfactura;
+    private javax.swing.JPanel btntrabajador;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JLabel txtcerrarsesion;
     // End of variables declaration//GEN-END:variables
 
 }

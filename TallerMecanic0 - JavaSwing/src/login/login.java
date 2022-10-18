@@ -3,8 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package login;
-
-import java.awt.Color;
 import javax.swing.JOptionPane;
 
 /**
@@ -88,7 +86,7 @@ public class login extends javax.swing.JFrame {
         txtContraseña.setBackground(new java.awt.Color(237, 11, 31));
         txtContraseña.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
         txtContraseña.setForeground(new java.awt.Color(0, 0, 0));
-        txtContraseña.setText("Contraseña");
+        txtContraseña.setText("*********");
         txtContraseña.setToolTipText("");
         txtContraseña.setBorder(null);
         txtContraseña.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -169,13 +167,13 @@ public class login extends javax.swing.JFrame {
         txtUsuario.setText("");
         }
         if (String.valueOf(txtContraseña.getPassword()).isEmpty()){
-            txtContraseña.setText("********");
+            txtContraseña.setText("*********");
         }
         
     }//GEN-LAST:event_txtUsuarioMousePressed
 
     private void txtContraseñaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtContraseñaMousePressed
-        if (String.valueOf(txtContraseña.getPassword()).equals("********")){
+        if (String.valueOf(txtContraseña.getPassword()).equals("*********")){
            txtContraseña.setText(""); 
         }
         if(txtUsuario.getText().isEmpty()){
